@@ -16,7 +16,12 @@ public class HomeWorkLoops {
      * @return минимальное число из массива
      */
     public static int min(int[] integers) {
-        return 1;
+        int min = Integer.MAX_VALUE;
+        for (int integer : integers) {
+            if (min > integer)
+                min = integer;
+        }
+        return min;
     }
 
     /**
@@ -29,7 +34,12 @@ public class HomeWorkLoops {
      * @return максимальное число из массива
      */
     public static double max(double[] doubles) {
-        return 1;
+        double max = Double.MIN_VALUE;
+        for (double aDouble : doubles) {
+            if (max < aDouble)
+                max = aDouble;
+        }
+        return max;
     }
 
     /**
@@ -42,7 +52,11 @@ public class HomeWorkLoops {
      * @return среднее арифмитическое число из массива
      */
     public static float average(short[] shorts) {
-        return 1;
+        float sum = 0f;
+        for (short aShort : shorts) {
+            sum += aShort;
+        }
+        return sum / shorts.length;
     }
 
     /**
@@ -54,6 +68,12 @@ public class HomeWorkLoops {
      * @return перевернутый массив
      */
     public static char[] reverse(char[] chars) {
-        return new char[1];
+        char tmp;
+        for (int i = 0; i < chars.length / 2; i++) {
+            tmp = chars[i];
+            chars[i] = chars[chars.length - i - 1];
+            chars[chars.length - i - 1] = tmp;
+        }
+        return chars;
     }
 }

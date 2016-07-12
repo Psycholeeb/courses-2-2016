@@ -15,7 +15,13 @@ public class HomeWorkStrings {
      * @return количество четных числе в строке
      */
     public static int countEvenInString(String s) {
-        return 1;
+        int sum = 0;
+        String[] nums = s.split("_");
+        for (String num : nums) {
+            if (Integer.parseInt(num) % 2 == 0)
+                sum++;
+        }
+        return sum;
     }
 
     /**
@@ -29,6 +35,21 @@ public class HomeWorkStrings {
      * @return результирующая строка
      */
     public static String removeSymbolFromString(String symbol, String s) {
-        return "";
+        char[] chars = s.toCharArray();
+        StringBuilder result = new StringBuilder();
+
+        int middle = 0;
+        if (chars.length % 2 != 0)
+            middle = chars.length / 2;
+
+        for (int i = 0; i < chars.length; i++) {
+            if (symbol.charAt(0) == chars[i]) {
+                if (i == 0 || i == chars.length - 1 || i == middle) {
+                    result.append(chars[i]);
+                }
+            } else
+                result.append(chars[i]);
+        }
+        return result.toString();
     }
 }

@@ -53,3 +53,7 @@
  [ДЗ #3](https://github.com/rxn1d/courses-2-2016/blob/master/module3/module_3_home_work.md)
  * Читаем про методы и ООП
  * Реализуем калькулятор
+
+4\. Домашки + практика
+
+[ДЗ #4](https://github.com/rxn1d/courses-2-2016/blob/master/module4/module_4_home_work.md)

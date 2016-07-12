@@ -9,7 +9,11 @@
       <list>
         <option value="$PROJECT_DIR$/module2/pom.xml" />
         <option value="$PROJECT_DIR$/module3/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/pom.xml" />
+=======
+        <option value="$PROJECT_DIR$/module4/pom.xml" />
+>>>>>>> 1d921b46a6617438944ecd22cd6eb70a8f71ae15
       </list>
     </option>
   </component>

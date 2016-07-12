@@ -30,6 +30,25 @@ public class Calculator {
         System.out.println("Good-bye!");
     }
 
+    public static float culc(float a, float b, String operator) {
+        float result = 0;
+        switch (operator) {
+            case "+":
+                result = a + b;
+                break;
+            case "-":
+                result = a - b;
+                break;
+            case "*":
+                result = a * b;
+                break;
+            case "/":
+                result = a / b;
+                break;
+        }
+        return result;
+    }
+
     public static String[] readFromConsole() {
         try {
             BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));

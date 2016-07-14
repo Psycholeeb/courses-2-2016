@@ -124,19 +124,23 @@ public class Calculator {
         return buffer;
     }
 
-    class UnsupportedOperationException extends Exception {
+    public void clear(){
+        buffer = 0;
+    }
+
+    public class UnsupportedOperationException extends Exception {
         public UnsupportedOperationException() {
             System.out.println("No such operation supported.");
         }
     }
 
-    class NumberOfOperandsException extends Exception {
+    public class NumberOfOperandsException extends Exception {
         public NumberOfOperandsException() {
             System.out.println("Wrong number of operands.");
         }
     }
 
-    class DivisionByZeroException extends Exception {
+    public class DivisionByZeroException extends Exception {
         public DivisionByZeroException() {
             System.out.println("Can't divide by zero.");
         }

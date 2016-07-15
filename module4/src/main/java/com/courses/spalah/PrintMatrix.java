@@ -77,91 +77,59 @@ public class PrintMatrix {
     }
 
     public static void triangle1(int size, String symbol) {
-        int n = 0;
-        int m = 0;
-        int count1 = 1;
-        int count2 = size - 1;
+        int count = 1;
         for (int i = 0; i < size; i++) {
-            while (n < count1) {
-                System.out.print(symbol + " ");
-                n++;
+            for (int j = 0; j < count ; j++) {
+                System.out.print(symbol+" ");
             }
-            n = 0;
-            count1++;
-            while (m < count2) {
-                System.out.print(" " + " ");
-                m++;
-            }
-            m = 0;
-            count2--;
+            count++;
             System.out.println();
         }
     }
 
     public static void triangle2(int size, String symbol) {
-        int n = 0;
-        int m = 0;
-        int count1 = size;
-        int count2 = 1;
+        int count = size;
         for (int i = 0; i < size; i++) {
-            while (n < count1) {
-                System.out.print(symbol + " ");
-                n++;
+            for (int j = 0; j < count ; j++) {
+                System.out.print(symbol+" ");
             }
-            n = 0;
-            count1--;
-            while (m < count2) {
-                System.out.print(" " + " ");
-                m++;
-            }
-            m = 0;
-            count2++;
+            count--;
             System.out.println();
         }
     }
 
     public static void triangle3(int size, String symbol) {
-        int n = 0;
-        int m = 0;
-        int count1 = size - 1;
-        int count2 = 1;
+
+        int emptySpase = size-1;
         for (int i = 0; i < size; i++) {
-            while (n < count1) {
-                System.out.print(" " + " ");
-                n++;
+            for (int j = 0; j < size ; j++) {
+                if(emptySpase>j){
+                    System.out.print("  ");
+                }
+                else {
+                    System.out.print(symbol+" ");
+                }
             }
-            n = 0;
-            count1--;
-            while (m < count2) {
-                System.out.print(symbol + " ");
-                m++;
-            }
-            m = 0;
-            count2++;
+            emptySpase--;
             System.out.println();
         }
     }
 
     public static void triangle4(int size, String symbol) {
-        int n = 0;
-        int m = 0;
-        int count1 = 0;
-        int count2 = size;
+        int emptySpase = 0;
         for (int i = 0; i < size; i++) {
-            while (n < count1) {
-                System.out.print(" " + " ");
-                n++;
+            for (int j = 0; j < size ; j++) {
+                if(emptySpase>j){
+                    System.out.print("  ");
+                }
+                else {
+                    System.out.print(symbol+" ");
+                }
             }
-            n = 0;
-            count1++;
-            while (m < count2) {
-                System.out.print(symbol + " ");
-                m++;
-            }
-            m = 0;
-            count2--;
+            emptySpase++;
             System.out.println();
         }
     }
 }
+
 

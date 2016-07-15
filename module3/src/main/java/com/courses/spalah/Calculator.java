@@ -65,7 +65,7 @@ public class Calculator {
         double secondOperand = 0;
         int numberOfArguments = input.length;
 
-        if (input[0].equals("c") || input[0].equals("C")) {
+        if (input[0].equalsIgnoreCase("c")) {
             buffer = 0;
             return buffer;
         }

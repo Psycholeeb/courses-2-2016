@@ -15,8 +15,18 @@ public class HomeWorkStrings {
      * @return количество четных числе в строке
      */
     public static int countEvenInString(String s) {
-        return 1;
-    }
+                   int count = 0;
+            String[] even = s.split("_");
+            for (int i = 0; i < even.length; i++) {
+                int ev = Integer.parseInt(even[i]);
+                if (ev % 2 == 0) {
+                    count++;
+                }
+
+            }
+            return count;
+        }
+
 
     /**
      * Метод должен удалить указанный символ из строки (кроме случая, если
@@ -29,6 +39,16 @@ public class HomeWorkStrings {
      * @return результирующая строка
      */
     public static String removeSymbolFromString(String symbol, String s) {
-        return "";
+                   char[] convert = s.toCharArray();
+            String result = "";
+            for (int i = 0; i < convert.length; i++) {
+
+                if (convert[i] != symbol.charAt(0) || i == 0 || i == convert.length / 2 || i == convert.length - 1) {
+                    result = result + String.valueOf(convert[i]);
+                }
+            }
+            return result;
+        }
+
     }
-}
+

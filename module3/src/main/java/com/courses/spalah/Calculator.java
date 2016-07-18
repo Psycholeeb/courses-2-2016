@@ -10,21 +10,45 @@ import java.io.InputStreamReader;
 public class Calculator {
     public static void main(String[] args) {
         System.out.println("Start calculator");
+        float prev = 0.0f;
+        float arg1 = 0.0f;
+        float arg2 = 0.0f;
+        String operator = "";
+        float result = 0.0f;
+        while (true) {
+            String[] array = readFromConsole();
+            if ("exit".equals(array[0])) {
+                break;
+            }
+            if (array.length == 2) {
+                arg1 = prev;
+                arg2 = Float.parseFloat(array[1]);
+                operator = array[0];
+            }
+            if (array.length == 3) {
+                arg1 = Float.parseFloat(array[0]);
+                arg2 = Float.parseFloat(array[2]);
+                operator = array[1];
+            }
+            result = culc(arg1, arg2, operator);
+            prev = result;
+            System.out.println(result);
+        }
     }
 
     public static float culc(float a, float b, String operator) {
         float result = 0;
-        switch (operator) {
-            case "+":
+        switch (operator.charAt(0)) {
+            case '+':
                 result = a + b;
                 break;
-            case "-":
+            case '-':
                 result = a - b;
                 break;
-            case "*":
+            case '*':
                 result = a * b;
                 break;
-            case "/":
+            case '/':
                 result = a / b;
                 break;
         }

@@ -1,5 +1,7 @@
 package com.courses.spalah;
 
+import java.util.ArrayList;
+
 /**
  * Модифицируйте этот класс(файл)
  *
@@ -15,7 +17,14 @@ public class HomeWorkStrings {
      * @return количество четных числе в строке
      */
     public static int countEvenInString(String s) {
-        return 1;
+        String arr[] = s.split("_");
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (Integer.parseInt(arr[i]) % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -29,6 +38,26 @@ public class HomeWorkStrings {
      * @return результирующая строка
      */
     public static String removeSymbolFromString(String symbol, String s) {
-        return "";
+        ArrayList<Character> newChar = new ArrayList<Character>();
+        char[] chars = s.toCharArray();
+        String result = "";
+
+        int mid = 0;
+        if (chars.length % 2 != 0) {
+            mid = chars.length / 2;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            if (chars[i] == symbol.charAt(0)) {
+                if (i == 0 || i == mid || i == chars.length - 1) {
+                    newChar.add(chars[i]);
+                } else continue;
+            } else newChar.add(chars[i]);
+        }
+
+        for (int i = 0; i < newChar.size(); i++) {
+            result += newChar.get(i);
+        }
+
+        return result;
     }
 }

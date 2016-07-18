@@ -14,9 +14,9 @@ public class Deposit {
         this.name = name;
     }
 
-    public double Profit(int years) {
-        double amount = initAmount + initAmount * rate / 100;
-        for (int i = 0; i < years - 1; i++) {
+    public double calculateProfit(int years) {
+        double amount = initAmount;
+        for (int i = 0; i < years; i++) {
             amount = amount + amount * rate / 100;
         }
         return amount - initAmount;

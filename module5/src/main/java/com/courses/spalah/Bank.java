@@ -16,7 +16,7 @@ public class Bank {
         deposit1 = new Deposit(730.2, 15.5, "Petya");
     }
 
-    public double Amount(int years) {
-        return deposit1.Profit(years) + deposit2.Profit(years) + deposit3.Profit(years);
+    public double calculateAmount(int years) {
+        return deposit1.calculateProfit(years) + deposit2.calculateProfit(years) + deposit3.calculateProfit(years);
     }
 }

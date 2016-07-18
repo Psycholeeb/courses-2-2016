@@ -1,5 +1,9 @@
 package com.courses.spalah;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * @author Ievgen Tararaka
  */
@@ -19,6 +23,25 @@ public class ConsecutiveNumbers {
      *
      * @param args - аргументы коммандной строки
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        boolean result = true;
+        BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите строку с числами: ");
+        String str = bufferRead.readLine();
+
+        System.out.println("Введите разделительный символ: ");
+        String sym = bufferRead.readLine();
+
+        String[] strings = str.split(sym);
+        int[] array = new int[strings.length];
+        array[0] = Integer.parseInt(strings[0]);
+        for (int i = 1; i < array.length; i++) {
+            array[i] = Integer.parseInt(strings[i]);
+            if (array[i] != array[i - 1] + 1) {
+                result = false;
+                break;
+            }
+        }
+        System.out.println("Result: " + result);
     }
 }

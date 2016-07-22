@@ -15,7 +15,18 @@ public class HomeWorkStrings {
      * @return количество четных числе в строке
      */
     public static int countEvenInString(String s) {
-        return 1;
+        int countchet = 0;
+        String[] strArray = s.split("_");
+        int[] intArray = new int[strArray.length];
+        for (int i = 0; i < strArray.length; i++) {
+            intArray[i] = Integer.parseInt(strArray[i]);
+        }
+
+        for (int j = 0; j < intArray.length; j++) {
+            if ((intArray[j] % 2) == 0)
+                countchet++;
+        }
+        return countchet;
     }
 
     /**
@@ -29,6 +40,25 @@ public class HomeWorkStrings {
      * @return результирующая строка
      */
     public static String removeSymbolFromString(String symbol, String s) {
-        return "";
+        char strSymbol = s.charAt(0);
+        String cut = "";
+        // Поверяем если в строке нечетное кол-во симовлов
+        if ((s.length()) % 2 != 0) {
+            for (int i = 0; i < s.length(); i++) {
+                if ((s.charAt(i) == strSymbol) && (i != 0) && (i != s.length() - 1) && (i != (s.length() - 1) / 2)) {
+                } else {
+                    cut += s.charAt(i);
+                }
+            }
+        } else {
+        // Выполняем если четное
+            for (int i = 0; i < s.length(); i++) {
+                if ((s.charAt(i) == strSymbol) && (i != 0) && (i != s.length() - 1)) {
+                } else {
+                    cut += s.charAt(i);
+                }
+            }
+        }
+        return cut;
     }
 }

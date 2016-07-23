@@ -1,4 +1,4 @@
-package com.courses.spalah;
+package com.courses.spalah.bank;
 
 /**
  * Created by Татьяна on 17.07.2016.
@@ -18,5 +18,9 @@ public class Bank {
 
     public double calculateAmount(int years) {
         return deposit1.calculateProfit(years) + deposit2.calculateProfit(years) + deposit3.calculateProfit(years);
+    }
+
+    public String getNameOfBank() {
+        return nameOfBank;
     }
 }

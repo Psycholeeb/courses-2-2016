@@ -1,4 +1,4 @@
-package com.courses.spalah;
+package com.courses.spalah.bank;
 
 /**
  * Created by Татьяна on 17.07.2016.
@@ -20,5 +20,17 @@ public class Deposit {
             amount = amount + amount * rate / 100;
         }
         return amount - initAmount;
+    }
+
+    public double getInitAmount() {
+        return initAmount;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public String getName() {
+        return name;
     }
 }

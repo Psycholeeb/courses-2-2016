@@ -1,12 +1,13 @@
 package com.courses.spalah;
+
 /**
  * Created by rprudnikov on 21.07.2016.
  */
 public class Bank {
-    String bankName;
-    Deposit deposit1;
-    Deposit deposit2;
-    Deposit deposit3;
+    private String bankName;
+    private Deposit deposit1;
+    private Deposit deposit2;
+    private Deposit deposit3;
 
     public Bank(String bnkname) {
         bankName = bnkname;
@@ -18,6 +19,10 @@ public class Bank {
     public int moneyCalc(int term) {
         int money = deposit1.calc(term) + deposit2.calc(term) + deposit3.calc(term);
         return money;
+    }
+
+    public String getBankName(){
+        return bankName;
     }
 
 }

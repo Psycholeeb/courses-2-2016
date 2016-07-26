@@ -7,6 +7,11 @@ public class Tram extends RailwayTransport {
     private int numberOfWagons;
     private int tramNumber;
 
+    public Tram(int numberOfWagons, int tramNumber) {
+        this.numberOfWagons = numberOfWagons;
+        this.tramNumber = tramNumber;
+    }
+
     public int getNumberOfWagons() {
         return numberOfWagons;
     }

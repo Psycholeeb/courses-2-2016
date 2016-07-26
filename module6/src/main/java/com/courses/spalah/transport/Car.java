@@ -14,4 +14,12 @@ public class Car extends GasolineTransport {
     public float getMileage() {
         return mileage;
     }
+
+    public void setEngineVolume(float engineVolume) {
+        this.engineVolume = engineVolume;
+    }
+
+    public void setMileage(float mileage) {
+        this.mileage = mileage;
+    }
 }

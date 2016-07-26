@@ -7,6 +7,12 @@ public class Truck extends Car{
     private String model;
     private float volumeOfTruck;
 
+    public Truck(String model, float maxSpeed, float volumeOfTruck) {
+        this.model = model;
+        setMaxSpeed(maxSpeed);
+        this.volumeOfTruck = volumeOfTruck;
+    }
+
     public String getModel() {
         return model;
     }
@@ -14,4 +20,6 @@ public class Truck extends Car{
     public float getVolumeOfTruck() {
         return volumeOfTruck;
     }
+
+
 }

@@ -6,6 +6,10 @@ package com.courses.spalah.transport;
 public class Trolleybus extends ElectricTransport {
     private int trolleybusNumber;
 
+    public Trolleybus(int trolleybusNumber) {
+        this.trolleybusNumber = trolleybusNumber;
+    }
+
     public int getTrolleybusNumber() {
         return trolleybusNumber;
     }

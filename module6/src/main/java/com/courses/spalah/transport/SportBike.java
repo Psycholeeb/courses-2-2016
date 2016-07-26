@@ -6,6 +6,10 @@ package com.courses.spalah.transport;
 public class SportBike extends Motorcycle {
     private String model;
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
     public String getModel() {
         return model;
     }

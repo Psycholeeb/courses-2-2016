@@ -8,7 +8,14 @@ public class Credit {
     private float annualPercent;
     private int countOfYears;
 
+    public Credit(double sumOfCredit, float annualPercent, int countOfYears) {
+        this.sumOfCredit = sumOfCredit;
+        this.annualPercent = annualPercent;
+        this.countOfYears = countOfYears;
+    }
+
     public double calculateDebt() {
+
         return sumOfCredit + (sumOfCredit * annualPercent / 100) * countOfYears;
     }
 
@@ -21,6 +28,7 @@ public class Credit {
     }
 
     public int getCountOfYears() {
+
         return countOfYears;
     }
 }

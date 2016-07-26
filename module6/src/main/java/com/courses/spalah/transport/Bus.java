@@ -8,6 +8,12 @@ public class Bus extends Car{
     private int numberOBus;
     private int capacityOfBus;
 
+    public Bus(String model, int numberOBus, int capacityOfBus) {
+        this.model = model;
+        this.numberOBus = numberOBus;
+        this.capacityOfBus = capacityOfBus;
+    }
+
     public String getModel() {
         return model;
     }
@@ -19,4 +25,6 @@ public class Bus extends Car{
     public int getCapacityOfBus() {
         return capacityOfBus;
     }
+
+
 }

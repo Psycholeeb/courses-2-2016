@@ -9,4 +9,8 @@ public class RoadTransport extends GroundTransport {
     public float getMaxSpeed() {
         return maxSpeed;
     }
+
+    public void setMaxSpeed(float maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
 }

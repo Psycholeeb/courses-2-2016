@@ -6,6 +6,10 @@ package com.courses.spalah.transport;
 public class QuadBike extends Motorcycle {
     private String model;
 
+    public QuadBike(String model) {
+        this.model = model;
+    }
+
     public String getModel() {
         return model;
     }

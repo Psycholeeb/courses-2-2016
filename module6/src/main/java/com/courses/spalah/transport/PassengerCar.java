@@ -7,6 +7,14 @@ public class PassengerCar extends Car {
     private String model;
     private float clearance;
 
+    public PassengerCar(String model, float engineVolume, float engineCapacity, float mileage, float clearance) {
+        this.model = model;
+        setEngineVolume(engineVolume);
+        setEngineCapacity(engineCapacity);
+        setMileage(mileage);
+        this.clearance = clearance;
+    }
+
     public String getModel() {
         return model;
     }

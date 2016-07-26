@@ -10,4 +10,8 @@ public class Motorcycle extends GasolineTransport {
 
         return engineVolume;
     }
+
+    public void setEngineVolume(float engineVolume) {
+        this.engineVolume = engineVolume;
+    }
 }

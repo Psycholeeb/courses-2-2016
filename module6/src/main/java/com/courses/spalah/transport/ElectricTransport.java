@@ -9,4 +9,10 @@ public class ElectricTransport extends RoadTransport {
     public float getContactNetwork() {
         return contactNetwork;
     }
+
+    public void setContactNetwork(float contactNetwork) {
+        this.contactNetwork = contactNetwork;
+    }
+
+
 }

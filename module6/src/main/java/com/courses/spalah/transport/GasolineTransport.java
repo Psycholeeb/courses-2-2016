@@ -9,4 +9,8 @@ public class GasolineTransport extends RoadTransport {
     public float getEngineCapacity() {
         return engineCapacity;
     }
+
+    public void setEngineCapacity(float engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
 }

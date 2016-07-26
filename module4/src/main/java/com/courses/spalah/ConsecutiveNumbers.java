@@ -20,5 +20,15 @@ public class ConsecutiveNumbers {
      * @param args - аргументы коммандной строки
      */
     public static void main(String[] args) {
+                    String string="1*2*3*6*7";
+            String symbol="\\*";
+            String [] arraystr=string.split(symbol);
+            int []arrint=new int [arraystr.length];
+            for (int i = 0; i <arraystr.length; i++) {
+                arrint[i]=Integer.parseInt(arraystr[i]);}
+
+
+            //if(arrint[0])
+        }
     }
-}
+

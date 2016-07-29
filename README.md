@@ -71,3 +71,18 @@
  * Пакеты
 
 [ДЗ #5](https://github.com/rxn1d/courses-2-2016/blob/master/module5/module_5_home_work.md)
+
+6\. Инкапсуляция и наследование
+ * Пакеты
+ * Инкапсуляция
+ * Наследование
+
+[ДЗ #6](https://github.com/rxn1d/courses-2-2016/blob/master/module6/module_6_home_work.md)
+
+7\. Полиморфизм
+ * Переопределение методов при наследовании
+ * Полиморфное поведение
+ * Абстрактный класс
+ * Интерфейс
+
+[ДЗ #7](https://github.com/rxn1d/courses-2-2016/blob/master/module7/module_7_home_work.md)

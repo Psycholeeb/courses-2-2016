@@ -1,7 +1,5 @@
 package com.courses.spalah;
 
-import java.util.Arrays;
-
 import com.courses.spalah.util.RandomUtils;
 import com.courses.spalah.util.TestUtils;
 import com.courses.spalah.util.ValueArrayPair;
@@ -10,6 +8,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
+import java.util.Arrays;
 
 import static org.junit.Assert.assertTrue;
 

@@ -15,7 +15,17 @@ public class HomeWorkStrings {
      * @return количество четных числе в строке
      */
     public static int countEvenInString(String s) {
-        return 1;
+
+        s = "2_5_6_7_4";
+        String[] b = s.split("_");
+        int count = 0;
+        for (int i = 0; i < b.length; i++) {
+            int d = Integer.valueOf(b[i]);
+            if (0 == d % 2){
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -24,11 +34,28 @@ public class HomeWorkStrings {
      * <p>Например:
      * данна строка - xabxxxx, символ - x, ответ - xabx
      *
+     +
+     +                if (convert[i] != symbol.charAt(0) || i == 0 || i == convert.length / 2 || i == convert.length - 1) {
+     +                    result = result + String.valueOf(convert[i]);
+     +                }
+     +            }
+     +            return result;
+     *
      * @param symbol символ который необходимо удалить
      * @param s      исходная строка
      * @return результирующая строка
      */
     public static String removeSymbolFromString(String symbol, String s) {
-        return "";
+        s = "abrarttaayuagga";
+        symbol = " ";
+        char[] c = s.toCharArray();
+        for (int i = 0; i < c.length; i++) {
+            if (c[i] != 'a'|| i == 0 || i == c.length / 2 || i == c.length - 1) {
+                symbol += c[i];
+
+            }
+        }
+        return symbol;
     }
 }
+

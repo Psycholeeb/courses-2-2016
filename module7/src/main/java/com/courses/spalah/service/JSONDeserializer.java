@@ -12,21 +12,29 @@ public class JSONDeserializer implements CarParkingDeserializer {
 
     @Override
     public CarParking deserialize(String serializedCarParking) {
+        CarParking carParking = new CarParking();
         String[] strings = serializedCarParking.replaceAll(":", "")
                 .replaceAll("\\{", "")
                 .replaceAll("\\}", "")
                 .replaceAll("\\[", "")
                 .replaceAll("\\]", "")
                 .replaceAll(",", "")
-                .replaceAll("\n", "")
                 .split("\"");
-        CarParking carParking = new CarParking();
+
+        for (int i = 0; i < strings.length; i++) {
+
+            System.out.println(strings[i]);
+        }
+
         ArrayList<Car> cars = new ArrayList<>();
+
 
         for (int i = 0; i < strings.length; i++) {
             if ("address".equals(strings[i])) {
                 carParking.setAddress(strings[i + 2]);
-                carParking.setParkingName(strings[i + 6]);
+            }
+            if ("parkingName".equals(strings[i])) {
+                carParking.setParkingName(strings[i + 2]);
             }
             if ("manufacturer".equals(strings[i])) {
                 Car car = new Car();
@@ -39,7 +47,6 @@ public class JSONDeserializer implements CarParkingDeserializer {
             }
             carParking.setCars(cars.toArray(new Car[cars.size()]));
         }
-
         System.out.println(carParking.toString());
 
         return carParking;

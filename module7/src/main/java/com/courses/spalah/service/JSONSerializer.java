@@ -11,23 +11,23 @@ public class JSONSerializer implements CarParkingSerializer {
     public String serialize(CarParking carParking) {
         StringBuilder builder = new StringBuilder();
         builder.append("{\n")
-                .append("  \"address\": \"")
+                .append("  \"address\":\"")
                 .append(carParking.getAddress() + "\",\n")
-                .append("  \"parkingName\": \"")
+                .append("  \"parkingName\":\"")
                 .append(carParking.getParkingName() + "\",\n")
-                .append("  \"cars\": [\n");
+                .append("  \"cars\":[\n");
 
         for (Car car : carParking.getCars()) {
             builder.append("    {\n")
-                    .append("     \"manufacturer\": \"")
+                    .append("     \"manufacturer\":\"")
                     .append(car.getManufacturer() + "\",\n")
-                    .append("     \"modelName\": \"")
+                    .append("     \"modelName\":\"")
                     .append(car.getModelName() + "\",\n")
-                    .append("     \"vin\": \"")
+                    .append("     \"vin\":\"")
                     .append(car.getVin() + "\",\n")
-                    .append("     \"lengthMillimeters\": ")
+                    .append("     \"lengthMillimeters\":")
                     .append(car.getLengthMillimeters() + ",\n")
-                    .append("     \"heightMillimeters\": ")
+                    .append("     \"heightMillimeters\":")
                     .append(car.getHeightMillimeters() + "\n")
                     .append("    },\n");
 

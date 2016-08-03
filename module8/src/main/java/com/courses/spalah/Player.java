@@ -20,4 +20,12 @@ public class Player {
         this.balance = balance;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return  name + " " + balance;
+    }
 }

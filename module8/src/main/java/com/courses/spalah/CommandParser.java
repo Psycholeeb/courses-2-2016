@@ -6,7 +6,7 @@ package com.courses.spalah;
 public class CommandParser {
     public Command getCommand(String[] arguments) {
         Command command = null;
-        if ("START_GAME".equals(arguments[0])) {
+        if ("PLAY_GAME".equals(arguments[0])) {
             command = new StartGameCommand();
         }
         if ("BET".equals(arguments[0])) {

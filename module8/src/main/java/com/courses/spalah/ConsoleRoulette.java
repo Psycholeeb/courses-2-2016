@@ -9,18 +9,24 @@ import java.io.InputStreamReader;
  */
 public class ConsoleRoulette {
     public static void main(String[] args) {
+        System.out.println("Game Started!");
         Roulette roulette = new Roulette();
         roulette.generate();
         roulette.print();
-        roulette.winningCell();
-        roulette.printWinningCell();
+        Table table = new Table();
 
-        while(true) {
+
+        while (true) {
             String[] arguments = readFromConsole();
             CommandParser commandParser = new CommandParser();
-            Command command = commandParser.getCommand(arguments);
-            command.setRoulette(roulette);
-            command.execute();
+            try {
+                Command command = commandParser.getCommand(arguments);
+                command.setRoulette(roulette);
+                command.setTable(table);
+                command.execute();
+            } catch (Exception ex) {
+                System.out.println("Invalid command!");
+            }
         }
     }
 

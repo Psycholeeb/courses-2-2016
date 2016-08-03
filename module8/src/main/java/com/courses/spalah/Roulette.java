@@ -1,7 +1,5 @@
 package com.courses.spalah;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
 /**
@@ -28,17 +26,23 @@ public class Roulette {
         }
     }
 
-    public int winningCell() {
-        return new Random().nextInt(38);
-    }
-
     public void print() {
         for (Cell cell : cells) {
             System.out.println(cell);
         }
     }
 
-    public void printWinningCell() {
-        System.out.println("WINNING CELL:" + cells[winningCell()]);
+    public int winningCell() {
+        return new Random().nextInt(38);
     }
+
+    public Cell getWinningCell() {
+
+        return cells[winningCell()];
+    }
+
+    public void printWinningCell() {
+        System.out.println("Winning cell:" + cells[winningCell()]);
+    }
+
 }

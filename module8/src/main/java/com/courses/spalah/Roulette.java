@@ -1,11 +1,13 @@
 package com.courses.spalah;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
  * Класс который представляет рулетку
  */
 public class Roulette {
+    ArrayList<Bets> winningBets = new ArrayList<>();
     Color color = Color.GREEN;
     Cell[] cells = new Cell[37];
 
@@ -36,13 +38,33 @@ public class Roulette {
         return new Random().nextInt(38);
     }
 
+
     public Cell getWinningCell() {
 
         return cells[winningCell()];
     }
 
-    public void printWinningCell() {
-        System.out.println("Winning cell:" + cells[winningCell()]);
+    public ArrayList<Bets> getWinningBets() {
+        return winningBets;
     }
+
+    public void setWinningBets(Cell cell) {
+        if (cell.getNumber() % 2 == 0) {
+            winningBets.add(Bets.EVEN);
+        } else {
+            winningBets.add(Bets.ODD);
+        }
+        if (cell.getColor() == Color.BLACK) {
+            winningBets.add(Bets.BLACK);
+        } else if (cell.getColor() == Color.RED) {
+            winningBets.add(Bets.RED);
+        }
+        if (cell.getNumber() < 19) {
+            winningBets.add(Bets.SMALL);
+        } else if (cell.getNumber() > 18) {
+            winningBets.add(Bets.BIG);
+        }
+    }
+
 
 }

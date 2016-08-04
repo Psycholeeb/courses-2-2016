@@ -7,17 +7,16 @@ public class StartGameCommand extends Command {
     Roulette roulette;
     Table table;
     Cell cell;
-    Bet bet;
-    Bets bets;
-    Player player;
 
     @Override
     public void execute() {
         roulette = getRoulette();
-        roulette.printWinningCell();
-        cell = roulette.getWinningCell();
         table = getTable();
+        cell = roulette.getWinningCell();
+        System.out.println("Winning cell:"+ cell);
+        roulette.setWinningBets(cell);
         table.getBets().clear();
+        roulette.getWinningBets().clear();
 
     }
 }

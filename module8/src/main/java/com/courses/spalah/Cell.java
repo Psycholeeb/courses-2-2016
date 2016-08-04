@@ -12,6 +12,14 @@ public class Cell {
         this.color = color;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
     @Override
     public String toString() {
         return number + "-" + color;

@@ -7,7 +7,7 @@ import java.util.Random;
  * Класс который представляет рулетку
  */
 public class Roulette {
-    ArrayList<Bets> winningBets = new ArrayList<>();
+   private ArrayList<Bets> winningBets = new ArrayList<>();
     Color color = Color.GREEN;
     Cell[] cells = new Cell[37];
 
@@ -65,6 +65,5 @@ public class Roulette {
             winningBets.add(Bets.BIG);
         }
     }
-
 
 }

@@ -7,6 +7,6 @@ package com.courses.spalah;
 public class ExitCommand extends Command{
     @Override
     public void execute() {
-       System.exit(0);
+            System.exit(0);
     }
 }

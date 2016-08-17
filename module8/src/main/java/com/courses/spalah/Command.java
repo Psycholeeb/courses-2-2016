@@ -4,9 +4,9 @@ package com.courses.spalah;
  * Created by Jeka on 29.07.2016.
  */
 public abstract class Command {
-    String[] arguments;
-    Roulette roulette;
-    Table table;
+    private String[] arguments;
+    private Roulette roulette;
+    private Table table;
 
     public void setArguments(String[] arguments) {
 

@@ -1,11 +1,10 @@
 package com.courses.spalah;
 
 /**
- * Класс который представляет ячейку на рулетке
- */
+ * Класс который представляет ячейку на рулетке */
 public class Cell {
-    int number;
-    Color color;
+    private int number;
+    private Color color;
 
     public Cell(int number, Color color) {
         this.number = number;

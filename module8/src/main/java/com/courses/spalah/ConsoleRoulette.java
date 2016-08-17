@@ -19,7 +19,7 @@ public class ConsoleRoulette {
         while (true) {
             String[] arguments = readFromConsole();
             CommandParser commandParser = new CommandParser();
-            try {
+           try {
                 Command command = commandParser.getCommand(arguments);
                 command.setRoulette(roulette);
                 command.setTable(table);
@@ -27,7 +27,7 @@ public class ConsoleRoulette {
             } catch (Exception ex) {
                 System.out.println("Invalid command!");
             }
-        }
+       }
     }
 
     public static String[] readFromConsole() {

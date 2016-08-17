@@ -6,10 +6,9 @@ import java.util.ArrayList;
  * Created by Татьяна on 02.08.2016.
  */
 public class Table {
+    private ArrayList<Player> players = new ArrayList<>();
+    private ArrayList<Bet> betsList = new ArrayList<>();
     Bets bets;
-    ArrayList<Player> players = new ArrayList<>();
-    ArrayList<Bet> betsList = new ArrayList<>();
-
 
     public void addToTable(String name, int balance) {
         if ((players.size()) < 5 && (balance > 0)) {
@@ -21,29 +20,33 @@ public class Table {
     }
 
     public void addBet(String playerName, int betSize, String betType) {
-
+        boolean betAdded = false;
         for (Player player : players) {
-            if (playerName.equals(player.getName()) && (player.balance - betSize > 0)) {
+            if (playerName.equals(player.getName()) && (player.getBalance() - betSize > 0)) {
                 betsList.add(new Bet(playerName, betSize, betParser(betType)));
                 System.out.println("BET ACCEPTED");
-            } else {
-                System.out.println("BET NOT ACCEPTED");
+                betAdded = true;
+                break;
             }
         }
-
+        if (betAdded == false) {
+            System.out.println("BET NOT ACCEPTED");
+        }
     }
 
     public void addBet(String playerName, int betSize, String betType, int betNamber) {
-
+        boolean betAdded = false;
         for (Player player : players) {
-            if (playerName.equals(player.getName()) && (player.balance - betSize > 0)) {
+            if (playerName.equals(player.getName()) && (player.getBalance() - betSize > 0)) {
                 betsList.add(new Bet(playerName, betSize, betParser(betType), betNamber));
                 System.out.println("BET ACCEPTED");
-            } else {
-                System.out.println("BET NOT ACCEPTED");
+                betAdded = true;
+                break;
             }
         }
-
+        if (betAdded == false) {
+            System.out.println("BET NOT ACCEPTED");
+        }
     }
 
     public Bets betParser(String betType) {
@@ -70,29 +73,25 @@ public class Table {
         return bets;
     }
 
-    public boolean checkBets(String betType) {
-
-        for (Bets bet : Bets.values()) {
-            if (bet.equals(Bets.valueOf(betType))) {
-                return true;
+    public Player getPlayerByName(String name) {
+        Player player = null;
+        for (Player p : players) {
+            if (name.equals(p.getName())) {
+                player = p;
+                break;
             } else {
-                return false;
+                continue;
             }
         }
-        return true;
-    }
-
-    public ArrayList<Player> getPlayers() {
-        return players;
+        return player;
     }
 
     public ArrayList<Bet> getBets() {
         return betsList;
     }
 
-    public void print() {
-        for (Bet bet : betsList) {
-            System.out.println(bet);
-        }
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
+
 }

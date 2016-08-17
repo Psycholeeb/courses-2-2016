@@ -16,6 +16,5 @@ public class BetCommand extends Command {
         if (arguments.length == 5) {
             table.addBet(arguments[1], Integer.parseInt(arguments[2]), arguments[3], Integer.parseInt(arguments[4]));
         }
-        table.print();
     }
 }

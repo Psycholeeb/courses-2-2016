@@ -5,8 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.courses.spalah</groupId>
-    <artifactId>module4</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>module10</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <build>
@@ -22,4 +21,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

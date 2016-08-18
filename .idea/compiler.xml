@@ -22,15 +22,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="module6" />
-        <module name="module8" />
+        <module name="module10" />
+        <module name="module11" />
+        <module name="module12" />
+        <module name="module5" />
+        <module name="module7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="module3" target="1.8" />
+      <module name="module10" target="1.8" />
+      <module name="module11" target="1.8" />
+      <module name="module12" target="1.8" />
       <module name="module4" target="1.8" />
+      <module name="module5" target="1.8" />
       <module name="module6" target="1.8" />
-      <module name="module8" target="1.8" />
+      <module name="module7" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

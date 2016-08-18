@@ -4,10 +4,11 @@ package com.courses.spalah;
  * Created by Jeka on 29.07.2016.
  */
 public class StartGameCommand extends Command {
-    Roulette roulette;
-    Table table;
-    Cell winningCell;
-    Player player;
+    private Roulette roulette;
+    private Table table;
+    private Cell winningCell;
+    private Player player;
+    private Bets bets;
 
     @Override
     public void execute() {
@@ -20,7 +21,7 @@ public class StartGameCommand extends Command {
         for (Bet bet : table.getBets()) {
             boolean winPlayer = false;
             Bets playerBet = bet.getBets();
-            if (playerBet.equals("STRAIGHT_UP") && bet.getBetNamber() == winningCell.getNumber()) {
+            if (playerBet.equals(bets.STRAIGHT_UP) && bet.getBetNamber() == winningCell.getNumber()) {
                 player = table.getPlayerByName(bet.getPlayerName());
                 player.setBalance(player.getBalance() + 35 * bet.getBetSize());
                 System.out.println(bet.getPlayerName() + " +" + 35*bet.getBetSize());
@@ -32,8 +33,6 @@ public class StartGameCommand extends Command {
                     System.out.println(bet.getPlayerName() + " +" + bet.getBetSize());
                     winPlayer = true;
                     break;
-                } else {
-                    continue;
                 }
             }
             if (winPlayer == false) {

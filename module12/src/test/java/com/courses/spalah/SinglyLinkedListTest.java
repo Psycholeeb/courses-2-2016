@@ -56,7 +56,6 @@ public class SinglyLinkedListTest {
         assertEquals(1, stringList.size());
 
         stringList.remove(0); //
-
         assertTrue(stringList.isEmpty());
 
         stringList.add("C"); // C
@@ -85,6 +84,8 @@ public class SinglyLinkedListTest {
         carList.add(civic); // civic
         carList.add(sx4); // civic sx4
 
+        System.out.println(carList);
+        
         assertTrue(carList.contains(new Car(20_000, "Honda Civic")));
         assertFalse(carList.contains(new Car(20_000, "Honda CRV")));
 

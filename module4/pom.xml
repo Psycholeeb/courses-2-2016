@@ -22,7 +22,4 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>../module6</module>
-    </modules>
 </project>

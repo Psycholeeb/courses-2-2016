@@ -1,0 +1,12 @@
+Words quantity - 1899
+Tokens quantity - 10922
+Sentences quantity - 232
+Max lenght of word - 12
+Min lenght of word - 1
+Number of unique words - 12
+Number of unique words(2) - 12
+Most frequency word - in
+Word statistics:
+{aenean=6, tempor=12, mollis=5, efficitur=6, elementum=3, potenti=3, bibendum=8, commodo=6, purus=11, augue=23, justo=16, lorem=10, leo=14, nam=13, id=21, per=2, semper=11, volutpat=13, ac=24, ad=1, sodales=7, finibus=11, in=38, velit=11, urna=22, sociosqu=1, luctus=12, fusce=9, at=25, pellentesque=30, platea=3, ipsum=16, convallis=4, elit=11, taciti=1, aptent=1, dictumst=3, ullamcorper=9, laoreet=7, vestibulum=22, congue=8, arcu=12, conubia=1, dolor=12, iaculis=13, inceptos=1, sed=32, duis=8, dictum=7, metus=14, vehicula=6, sem=8, dapibus=11, pulvinar=6, diam=12, porta=12, ultricies=14, interdum=10, a=28, nisi=13, morbi=4, quam=20, tincidunt=20, nisl=8, ultrices=15, aliquam=15, condimentum=5, ornare=13, praesent=6, magna=19, auctor=6, turpis=9, nibh=11, placerat=8, ante=17, malesuada=8, rutrum=11, sapien=11, himenaeos=1, quis=21, porttitor=4, eros=9, sagittis=8, maximus=9, etiam=6, tristique=11, torquent=1, suscipit=12, est=15, cursus=8, habitasse=3, odio=10, eleifend=7, accumsan=9, egestas=6, hac=3, integer=10, fames=1, nec=25, scelerisque=12, erat=7, nunc=16, facilisis=11, euismod=7, donec=17, mauris=18, vivamus=4, nostra=1, imperdiet=9, neque=22, molestie=11, vel=31, mi=15, feugiat=10, ut=25, enim=10, ligula=11, consequat=8, lobortis=10, varius=9, dignissim=6, nullam=10, vulputate=10, fermentum=4, litora=1, et=28, eu=25, mattis=13, lacus=11, ex=10, vitae=21, posuere=16, tellus=7, felis=6, orci=14, phasellus=6, faucibus=14, massa=14, blandit=8, lacinia=8, pharetra=8, lectus=10, venenatis=12, rhoncus=5, curae;=5, viverra=10, tempus=6, primis=6, non=17, risus=5, proin=8, cras=7, maecenas=6, hendrerit=9, class=1, sit=28, tortor=14, fringilla=10, curabitur=5, cubilia=5, sollicitudin=8, suspendisse=12, aliquet=8, amet=28, pretium=11, quisque=5, dui=10, libero=15, gravida=11, consectetur=7, eget=27, nulla=20}
+Character statistics:
+{=38, a=886, b=136, c=434, d=285, e=1251, f=95, g=149, h=52, i=1066, j=16, l=623, ,=167, m=482, n=641, .=232, o=416, p=283, q=159, r=591, s=880, t=877, u=993, v=184, x=19, ;=5}

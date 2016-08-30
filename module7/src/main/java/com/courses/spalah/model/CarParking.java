@@ -45,6 +45,11 @@ public class CarParking {
         this.cars = cars;
     }
 
+    public String getCarManufacturer (Car car){
+        return car.getManufacturer();
+    }
+
+
     @Override
     public String toString() {
         return "CarParking{" +

@@ -1,5 +1,6 @@
 package com.courses.spalah.service;
 
+import com.courses.spalah.model.Car;
 import com.courses.spalah.model.CarParking;
 
 /**
@@ -10,4 +11,10 @@ import com.courses.spalah.model.CarParking;
  */
 public interface CarParkingSerializer {
     String serialize(CarParking carParking);
+
+ //   public void printParkingName();
+
+//    public void printParkingAdress();
+
+ //   public void printCarsArray();
 }

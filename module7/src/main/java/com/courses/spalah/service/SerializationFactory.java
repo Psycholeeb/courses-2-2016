@@ -1,6 +1,7 @@
 package com.courses.spalah.service;
 
 import com.courses.spalah.common.Format;
+import com.courses.spalah.model.CarParking;
 
 /**
  * Фабрика для создания сериализатора и десериализатора для конкретного типа файла
@@ -35,10 +36,13 @@ public class SerializationFactory {
      */
     public static CarParkingSerializer getSerializer(Format format) {
         // TODO - здесь будет ваша логика. Необходимо вернуть реализацию интерфейса
+
         if (format == Format.JSON)
             return new CarParkingJSONSerializer();
         if (format == Format.XML)
             return new CarParkingXMLSerializer();
+
         return  null;
     }
+
 }

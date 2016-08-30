@@ -15,6 +15,7 @@ class Credit {
     }
 
     float getCreditAmount(float persentPerYear, float currentCredit, int yearsOfCredit){
+
           return currentCredit + (currentCredit * persentPerYear / 100 * yearsOfCredit);
     }
 

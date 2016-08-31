@@ -12,8 +12,8 @@ public class MyLinkedList<T> implements MyList<T> {
     private Node<T> current;
     private int size;
 
-    MyLinkedList() {
-        first = new Node<>(null);
+    public MyLinkedList() {
+        first = new Node<T>(null);
         last = first;
     }
 
@@ -29,7 +29,7 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public boolean add(T element) {
-        Node<T> newNode = new Node<>(element, null);
+        Node<T> newNode = new Node<T>(element, null);
         last.setNext(newNode);
         last = newNode;
         size++;
@@ -38,7 +38,7 @@ public class MyLinkedList<T> implements MyList<T> {
 
     @Override
     public void add(int index, T element) {
-        Node<T> newNode = new Node<>(element, null);
+        Node<T> newNode = new Node<T>(element, null);
         current = getNode(index - 1);
         next = current.getNext();
         current.setNext(newNode);
@@ -86,9 +86,9 @@ public class MyLinkedList<T> implements MyList<T> {
     public String toString() {
         String str = "";
         current = first;
-        while (current.getNext() != null) {
-            str += current.getNext().getValue().toString();
+        while (current.getNext()!=null){
             current = current.getNext();
+            str+=current.getValue().toString();
         }
         return str;
     }
@@ -107,8 +107,8 @@ public class MyLinkedList<T> implements MyList<T> {
     }
 
     private class MyIterator implements Iterator<T> {
-        int index = 0;
         Node<T> current = first;
+        int index;
 
         @Override
         public boolean hasNext() {
@@ -122,9 +122,10 @@ public class MyLinkedList<T> implements MyList<T> {
         @Override
         public T next() {
             index++;
-            return next.getValue();
+            return current.getValue();
         }
 
+        @Override
         public void remove() {
             index--;
             MyLinkedList.this.remove(index);

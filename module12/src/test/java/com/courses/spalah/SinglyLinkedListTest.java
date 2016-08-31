@@ -85,7 +85,7 @@ public class SinglyLinkedListTest {
         carList.add(sx4); // civic sx4
 
         System.out.println(carList);
-        
+
         assertTrue(carList.contains(new Car(20_000, "Honda Civic")));
         assertFalse(carList.contains(new Car(20_000, "Honda CRV")));
 

@@ -1,4 +1,4 @@
-package spalah;
+package com.courses.spalah.homework;
 
 /**
  * Вам необходимо понять, что не хватаем этому классу, чтобы он имел возможность

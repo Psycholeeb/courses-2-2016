@@ -1,4 +1,6 @@
-package spalah;
+package com.courses.spalah.homework;
+
+import spalah.MyLinkedList;
 
 /**
  * @author Ievgen Tararaka

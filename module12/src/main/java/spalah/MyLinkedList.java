@@ -1,5 +1,7 @@
 package spalah;
 
+import com.courses.spalah.homework.MyList;
+
 import java.util.Iterator;
 
 /**

@@ -6,7 +6,6 @@ package com.courses.spalah.homework;
 public class RubberIntArray {
     private int[] ints = new int[2];
     private int size = 0;
-    private int index;
 
     /**
      * Добавляет элемент в массив. Если размер массива не позволяет добавить элемент - его необходимо увеличить на 5.

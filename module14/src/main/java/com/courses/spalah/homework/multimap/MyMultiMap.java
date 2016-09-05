@@ -1,12 +1,16 @@
 package com.courses.spalah.homework.multimap;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Татьяна on 04.09.2016.
  */
 public class MyMultiMap<K, V> implements MultiMap<K, V> {
     private Map<K, ArrayList<V>> map = new HashMap<>();
+    private int size;
 
     @Override
     public boolean put(K key, V value) {
@@ -18,6 +22,7 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
             list.add(value);
             map.put(key, list);
         }
+        size++;
         return true;
     }
 
@@ -35,12 +40,9 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
     public Collection<V> removeAll(K key) {
         if (map.containsKey(key)) {
             ArrayList<V> list = map.get(key);
-            if (!list.isEmpty()) {
-                Iterator<V> iterator = list.iterator();
-                while (iterator.hasNext()) {
-                }
-            }
-
+            map.remove(key);
+            size -= list.size();
+            return list;
         }
         return new ArrayList<>();
     }
@@ -51,6 +53,7 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
             ArrayList<V> list = map.get(key);
             if (list.contains(value)) {
                 list.remove(value);
+                size--;
                 return true;
             }
         }
@@ -61,9 +64,7 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
     public Collection<V> allValues() {
         ArrayList<V> list = new ArrayList<>();
         for (Map.Entry<K, ArrayList<V>> pair : map.entrySet()) {
-            for (V value : pair.getValue()) {
-                list.add(value);
-            }
+            list.addAll(pair.getValue());
         }
         return list;
     }
@@ -80,15 +81,18 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
 
     @Override
     public boolean isEmpty() {
-        return map.size() == 0;
+        return size == 0;
     }
 
     @Override
     public int size() {
-        int size = 0;
-        for (Map.Entry<K, ArrayList<V>> pair : map.entrySet()) {
-            size += pair.getValue().size();
-        }
         return size;
+    }
+
+    @Override
+    public String toString() {
+        return "MyMultiMap{" +
+                "map=" + map +
+                '}';
     }
 }

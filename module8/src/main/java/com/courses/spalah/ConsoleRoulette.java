@@ -3,6 +3,7 @@ package com.courses.spalah;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 /**
  * Класс-стартер для вашей реализации рулетки
@@ -14,7 +15,6 @@ public class ConsoleRoulette {
         roulette.generate();
         roulette.print();
         Table table = new Table();
-
 
         while (true) {
             String[] arguments = readFromConsole();

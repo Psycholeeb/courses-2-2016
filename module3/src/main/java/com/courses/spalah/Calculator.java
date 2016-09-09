@@ -36,7 +36,7 @@ public class Calculator {
         }
     }
 
-    public static String[] readFromConsole() {
+    public static String readFromConsole() {
         try {
             BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
             String input = bufferRead.readLine();

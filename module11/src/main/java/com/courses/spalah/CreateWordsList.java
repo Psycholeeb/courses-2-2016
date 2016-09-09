@@ -15,7 +15,7 @@ public class CreateWordsList {
 
     public static ArrayList<String> createArrayList(String input) throws IOException {
         String str = String.join("\n", Files.readAllLines(Paths.get(input)));
-        ArrayList<String> stringArrayList = new ArrayList<String>(Arrays.asList(str.split("\\s")));
+        ArrayList<String> stringArrayList = new ArrayList<>(Arrays.asList(str.split("\\s")));
         for(int i = 0; i < stringArrayList.size(); i++) {
             if(stringArrayList.get(i).equals("") || (stringArrayList.get(i).equals("\n"))){
                 stringArrayList.remove(i);

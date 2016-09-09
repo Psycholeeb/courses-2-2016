@@ -1,6 +1,7 @@
 package com.courses.spalah;
 
 import java.util.Iterator;
+import java.util.LinkedList;
 
 import com.courses.spalah.homework.Car;
 import com.courses.spalah.homework.ListFactory;

@@ -28,10 +28,8 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
 
     @Override
     public Collection<V> get(K key) {
-        for (Map.Entry<K, ArrayList<V>> pair : map.entrySet()) {
-            if (key.equals(pair.getKey())) {
-                return pair.getValue();
-            }
+        if(map.containsKey(key)){
+            return map.get(key);
         }
         return new ArrayList<>();
     }

@@ -29,18 +29,35 @@ public class JdbcExample {
         String insertToPerson = "INSERT INTO person VALUE(id, ?, ?, ?)";
         PreparedStatement preparedStatementPerson = con.prepareStatement(insertToPerson);
 
+        String selectCount = "SELECT COUNT(id) FROM address WHERE address.address = ?";
+        PreparedStatement preparedStatementSelectCount = con.prepareStatement(selectCount);
+
+        String selectID = "SELECT id FROM address WHERE address.address = ?";
+        PreparedStatement preparedStatementSelectID = con.prepareStatement(selectID);
+
+        String selectPerson = "SELECT person.first_name, person.last_name, address.address FROM person\n" +
+                "INNER JOIN address ON address_id = address.id WHERE person.id = ?";
+        PreparedStatement preparedStatementSelectPerson = con.prepareStatement(selectPerson);
         mainForm.getSaveBtn().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    preparedStatementAddress.setString(1, mainForm.getAddressFld().getText());
-                    preparedStatementAddress.executeUpdate();
-                    Statement statement = con.createStatement();
-                    String sql = "SELECT MAX(id) FROM address";
-                    ResultSet result = statement.executeQuery(sql);
+                    String address = mainForm.getAddressFld().getText();
+                    preparedStatementSelectCount.setString(1, address);
+                    ResultSet res = preparedStatementSelectCount.executeQuery();
+                    int count = 0;
+                    while (res.next()) {
+                        count = res.getInt("COUNT(id)");
+                    }
+                    if (count == 0) {
+                        preparedStatementAddress.setString(1, address);
+                        preparedStatementAddress.executeUpdate();
+                    }
+                    preparedStatementSelectID.setString(1, address);
+                    ResultSet result = preparedStatementSelectID.executeQuery();
                     int addressID = 0;
                     while (result.next()) {
-                         addressID = result.getInt("MAX(id)");
+                        addressID = result.getInt("id");
                     }
                     preparedStatementPerson.setString(1, mainForm.getNameFld().getText());
                     preparedStatementPerson.setString(2, mainForm.getSurnameFld().getText());
@@ -53,7 +70,27 @@ public class JdbcExample {
             }
 
         });
+        mainForm.getShowBtn().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int ID = Integer.parseInt(mainForm.getIDFld().getText());
+                try {
+                    preparedStatementSelectPerson.setInt(1, ID);
+                    ResultSet result = preparedStatementSelectPerson.executeQuery();
+                    while (result.next()) {
+                        String firstName = result.getString("first_name");
+                        mainForm.getNameFld2().setText(firstName);
+                        String lastName = result.getString("last_name");
+                        mainForm.getSurnameFld2().setText(lastName);
+                        String address = result.getString("address");
+                        mainForm.getAddressFld2().setText(address);
+                    }
 
+                } catch (SQLException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        });
     }
 
     /**

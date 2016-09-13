@@ -38,38 +38,52 @@ public class JdbcExample {
         String selectPerson = "SELECT person.first_name, person.last_name, address.address FROM person\n" +
                 "INNER JOIN address ON address_id = address.id WHERE person.id = ?";
         PreparedStatement preparedStatementSelectPerson = con.prepareStatement(selectPerson);
+
+
         mainForm.getSaveBtn().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    String address = mainForm.getAddressFld().getText();
-                    preparedStatementSelectCount.setString(1, address);
-                    ResultSet res = preparedStatementSelectCount.executeQuery();
-                    int count = 0;
-                    while (res.next()) {
-                        count = res.getInt("COUNT(id)");
+                String address = mainForm.getAddressFld().getText();
+                String firstName = mainForm.getNameFld().getText();
+                String lastName = mainForm.getSurnameFld().getText();
+                if (firstName.isEmpty() || lastName.isEmpty() || address.isEmpty()) {
+                    JOptionPane.showMessageDialog(new JFrame(), "Fill all fields", "Warning", JOptionPane.WARNING_MESSAGE);
+                } else {
+                    try {
+                        preparedStatementSelectCount.setString(1, address);
+                        ResultSet res = preparedStatementSelectCount.executeQuery();
+                        int count = 0;
+                        while (res.next()) {
+                            count = res.getInt("COUNT(id)");
+                        }
+
+                        if (count == 0) {
+                            preparedStatementAddress.setString(1, address);
+                            preparedStatementAddress.executeUpdate();
+                        }
+
+                        preparedStatementSelectID.setString(1, address);
+                        ResultSet result = preparedStatementSelectID.executeQuery();
+                        int addressID = 0;
+                        while (result.next()) {
+                            addressID = result.getInt("id");
+                        }
+
+                        preparedStatementPerson.setString(1, firstName);
+                        preparedStatementPerson.setString(2, lastName);
+                        preparedStatementPerson.setInt(3, addressID);
+                        preparedStatementPerson.executeUpdate();
+                        JOptionPane.showMessageDialog(new JFrame(), "Saved", "Dialog", JOptionPane.INFORMATION_MESSAGE);
+
+
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
                     }
-                    if (count == 0) {
-                        preparedStatementAddress.setString(1, address);
-                        preparedStatementAddress.executeUpdate();
-                    }
-                    preparedStatementSelectID.setString(1, address);
-                    ResultSet result = preparedStatementSelectID.executeQuery();
-                    int addressID = 0;
-                    while (result.next()) {
-                        addressID = result.getInt("id");
-                    }
-                    preparedStatementPerson.setString(1, mainForm.getNameFld().getText());
-                    preparedStatementPerson.setString(2, mainForm.getSurnameFld().getText());
-                    preparedStatementPerson.setInt(3, addressID);
-                    preparedStatementPerson.executeUpdate();
-                } catch (SQLException e1) {
-                    e1.printStackTrace();
                 }
-                JOptionPane.showMessageDialog(new JFrame(), "Saved", "Dialog", JOptionPane.INFORMATION_MESSAGE);
             }
 
         });
+
         mainForm.getShowBtn().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,8 +94,10 @@ public class JdbcExample {
                     while (result.next()) {
                         String firstName = result.getString("first_name");
                         mainForm.getNameFld2().setText(firstName);
+
                         String lastName = result.getString("last_name");
                         mainForm.getSurnameFld2().setText(lastName);
+
                         String address = result.getString("address");
                         mainForm.getAddressFld2().setText(address);
                     }

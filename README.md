@@ -160,3 +160,63 @@
  * Читаем о базах данных
  * Устанавливаем MySQL и клиентскую программу
  * Пишем и пробуем запускать простейшией SQL-запросы
+
+16\. Joins и JDBC
+ * Joins
+   * Inner
+   * Left
+   * Right
+   * Full
+   * Cross
+ * Транзакционность
+ * JDBC
+   * Обзор
+   * Driver
+   * Connection
+   * Statement
+   * Result Set
+   * Batch Update
+   * Transactions
+
+[ДЗ #16](https://github.com/rxn1d/courses-2-2016/blob/master/module16/module_16_home_work.md)
+ * Читаем о JDBC
+ * Пишем приложение, которое использует JDBC
+
+17\. Практика. Разбор [ДЗ #16](https://github.com/rxn1d/courses-2-2016/blob/master/module16/module_16_home_work.md)
+
+[ДЗ #17](https://github.com/rxn1d/courses-2-2016/blob/master/module17/module_17_home_work.md)
+ * Исправляем коментарии
+
+18\. Сервлеты
+ * Что такое Servlet
+ * HTTP
+ * Servlet контейнер
+ * Жизненный цикл сервлетов
+ * Пример
+ * GenericServlet
+ * HttpServlet
+ * HttpServletRequest, HttpServletResponse
+ * Параметры, тело, заголовки, coockies
+ * Filter
+ * web.xml
+
+[ДЗ #18](https://github.com/rxn1d/courses-2-2016/blob/master/module18/module_18_home_work.md)
+ * Пишем маленькое web-приложение
+
+19\. Рефлексия
+
+[ДЗ #19](https://github.com/rxn1d/courses-2-2016/blob/master/module19/module_19_home_work.md)
+ * Пишем приложение для работы с аннотациями
+
+20\. Юнит тестирование
+ * Что такое unit тестирование
+ * Зачем нужны unit тесты
+ * Фреймворки для юнит тестирования в Java
+ * Пример
+ * Junit и его API
+ * Интеграционные тесты
+ * TDD
+
+
+[ДЗ #20](https://github.com/rxn1d/courses-2-2016/blob/master/module20/module_20_home_work.md)
+ * Пишем кредитный калькулятор и покрываем его тестами

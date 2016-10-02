@@ -16,20 +16,15 @@ public class ConnectionManager {
     private String username;
     private String password;
     private Connection connection;
-    private File file = new File("C:\\Tanya\\Java\\Courses\\courses-2-2016\\module16\\src\\main\\resources\\config.properties");
 
     public Connection createConnection() throws IOException, SQLException {
         Properties properties = new Properties();
-        FileInputStream fileInputStream = new FileInputStream(file);
+        FileInputStream fileInputStream = new FileInputStream("module16/src/main/resources/config.properties");
         properties.load(fileInputStream);
 
         url = properties.getProperty("db.host");
         username = properties.getProperty("db.login");
         password = properties.getProperty("db.password");
-        System.out.println("HOST: " + url
-                + ", LOGIN: " + username
-                + ", PASSWORD: " + password);
-
         connection = DriverManager.getConnection(url, username, password);
 
         return connection;

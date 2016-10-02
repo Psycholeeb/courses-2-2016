@@ -7,7 +7,7 @@ import java.text.Normalizer;
 /**
  * Created by Татьяна on 11.09.2016.
  */
-public class ClientForm  extends JFrame{
+public class ClientForm {
     private JTextField nameFld;
     private JTextField surnameFld;
     private JTextField addressFld;

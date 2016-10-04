@@ -38,9 +38,8 @@ public class MyMultiMap<K, V> implements MultiMap<K, V> {
     public Collection<V> removeAll(K key) {
         if (map.containsKey(key)) {
             ArrayList<V> list = map.get(key);
-            map.remove(key);
             size -= list.size();
-            return list;
+            return map.remove(key);
         }
         return new ArrayList<>();
     }

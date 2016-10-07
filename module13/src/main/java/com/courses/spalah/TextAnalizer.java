@@ -16,7 +16,7 @@ public class TextAnalizer {
         //args[0] = "лет";
         //args[1] = "C:\\spalah\\courses-2-2016\\module13\\src\\main\\java\\com\\courses\\spalah\\Task1\\file.txt";
         String pathToFile = "C:\\spalah\\courses-2-2016\\module13\\src\\main\\java\\com\\courses\\spalah\\Task1\\file.txt";
-        TextAnalize textAnalizer = new TextAnalize(args[0], pathToFile);
+        TextAnalize textAnalizer = new TextAnalize("лет", pathToFile);
         try {
             System.out.println(textAnalizer.searchSequence());
         } catch (FileNotFoundException e) {

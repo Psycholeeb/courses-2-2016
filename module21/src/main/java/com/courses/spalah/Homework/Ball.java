@@ -23,8 +23,8 @@ public class Ball {
         Random random = new Random();
         this.radius = random.nextInt(MAX_RADIUS) + MIN_RADIUS;
         this.coordinates = point;
-        this.coordinates.x = point.x - radius / 2;
-        this.coordinates.y = point.y - radius / 2;
+        this.coordinates.x = point.x - radius/2;
+        this.coordinates.y = point.y - radius/2;
         int red = random.nextInt(RGB_MAX);
         int green = random.nextInt(RGB_MAX);
         int blue = random.nextInt(RGB_MAX);

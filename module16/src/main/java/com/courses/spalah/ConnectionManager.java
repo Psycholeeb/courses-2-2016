@@ -19,8 +19,7 @@ public class ConnectionManager {
 
     public Connection createConnection() throws IOException, SQLException {
         Properties properties = new Properties();
-        FileInputStream fileInputStream = new FileInputStream("module16/src/main/resources/config.properties");
-        properties.load(fileInputStream);
+        properties.load(this.getClass().getResourceAsStream("/config.properties"));
 
         url = properties.getProperty("db.host");
         username = properties.getProperty("db.login");

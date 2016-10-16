@@ -4,8 +4,8 @@ package com.courses.spalah.HomeWork;
  * Created by Татьяна on 02.10.2016.
  */
 public class FormCommander {
-    Solver solver = new Solver();
-    CreditData creditData;
+   private Solver solver = new Solver();
+   private CreditData creditData;
 
 
     public void calcMonthlyPayment(ClientForm clientForm) {

@@ -43,7 +43,7 @@ public class UsersHttpServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
-        
+
     }
 
     private static void registerDriver() throws ClassNotFoundException, SQLException {

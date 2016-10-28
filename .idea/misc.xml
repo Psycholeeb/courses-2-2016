@@ -6,8 +6,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/module2/pom.xml" />
-        <option value="$PROJECT_DIR$/module3/pom.xml" />
         <option value="$PROJECT_DIR$/module4/pom.xml" />
         <option value="$PROJECT_DIR$/module5/pom.xml" />
         <option value="$PROJECT_DIR$/module6/pom.xml" />
@@ -18,7 +16,13 @@
         <option value="$PROJECT_DIR$/module13/pom.xml" />
         <option value="$PROJECT_DIR$/module14/pom.xml" />
         <option value="$PROJECT_DIR$/module15/pom.xml" />
+        <option value="$PROJECT_DIR$/module20/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/module16/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">

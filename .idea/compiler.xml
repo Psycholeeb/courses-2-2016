@@ -28,7 +28,8 @@
         <module name="module13" />
         <module name="module14" />
         <module name="module15" />
-        <module name="module2" />
+        <module name="module20" />
+        <module name="module4" />
         <module name="module5" />
         <module name="module7" />
         <module name="module9" />
@@ -42,8 +43,9 @@
       <module name="module14" target="1.8" />
       <module name="module15" target="1.8" />
       <module name="module2" target="1.8" />
+      <module name="module20" target="1.8" />
       <module name="module3" target="1.8" />
-      <module name="module4" target="1.8" />
+      <module name="module4" target="1.5" />
       <module name="module5" target="1.8" />
       <module name="module6" target="1.8" />
       <module name="module7" target="1.8" />

@@ -20,9 +20,7 @@ public class Serializator implements CarParkingSerializer {
                     "      \"vin\": \""+carParking.getCars()[i].getVin()+"\",\n" +
                     "      \"lengthMillimeters\": "+carParking.getCars()[i].getLengthMillimeters()+",\n" +
                     "      \"heightMillimeters\": "+carParking.getCars()[i].getHeightMillimeters()+"\n" +
-                    "    }";
-            if(!(i == carParking.getCars().length-1))
-                s += ",\n";
+                    "    },\n";
         }
 
         s += "  ]\n" +

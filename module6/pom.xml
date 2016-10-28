@@ -22,11 +22,8 @@
             </plugin>
         </plugins>
     </build>
-<<<<<<< HEAD
     <modules>
         <module>../module9</module>
     </modules>
-=======
->>>>>>> 084ea68c0fec064e9aa5dafe9c003be4deae2683
 
 </project>

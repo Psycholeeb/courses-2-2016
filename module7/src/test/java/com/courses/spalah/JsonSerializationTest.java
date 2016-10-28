@@ -68,9 +68,7 @@ public class JsonSerializationTest {
 
     @Test
     public void testSerializationFirstParking() {
-
         int i = 0;
-
         CarParkingSerializer serializer = SerializationFactory.getSerializer(FORMAT);
         String json = serializer.serialize(parking1);
 

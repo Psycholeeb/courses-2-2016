@@ -304,3 +304,6 @@
    * Добавление маппинга на контроллер
    * Сonsumes и Produces
  * Редирект и валидация
+
+## Финальный проект
+Ссылка на описание - [тут](https://github.com/rxn1d/courses-2-2016/blob/master/finalProject/final_project_requirements.md).

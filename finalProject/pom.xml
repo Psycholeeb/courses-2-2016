@@ -93,7 +93,6 @@
                 <configuration>
                     <port>8080</port>
                     <path>/</path>
-                    <tomcatLoggingFile>log.txt</tomcatLoggingFile>
                 </configuration>
             </plugin>
         </plugins>

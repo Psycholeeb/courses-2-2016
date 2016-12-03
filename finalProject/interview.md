@@ -55,11 +55,111 @@
    * Рассказать про Heap
 
 ### Коллекции
+ * Рассказать о иерархии коллекций
+ * Основные коллекции. Знать как работают и зачем используются.
+   * List
+     * ArrayList
+     * LinkedList
+       * В чем разница по сравнению с ArrayList
+       * В чем преимущества и недодстаки
+       * Скорость вставки и поиска элементов
+   * Map
+     * HashMap
+       * Особое внимание следует уделить тому, как работает HashMap.
+       * Связь с методами equals и hashCode
+   * Set
+     * HashSet
 
 ### Многопоточность
+ * Потоки в Java. Как создать, начать выполнять.
+   * Thread
+   * Runnable
+   * Thread.sleep()
+   * Метод interrupt
+ * Методы класса Thread.
+ * Проблема доступа к общим ресурсам
+   * Объяснить о проблеме общих данных в контексте многопоточности
+   * Зачем нужна синхронизация?
+   * Что такое блокировка?
+   * Что такое монитор?
+   * Ключевое слово synhronized
+     * Блок
+     * Метод
+     * Статический метод
+   * Как работает синхронизация в Java?
+   * Ключевое слово volatile
+ * Методы класса Object
+   * wait()
+   * notify()
+   * notifyAll()
+ * Immutable классы
+ * Атомарность операций
 
 ### SQL и JDBC
+  * Что такое реляционная база данных?
+  * Таблицы
+  * Первичный и вторичный ключ
+  * Типы данных
+  * Запросы
+    * DDL
+      * CREATE
+      * ALTER
+    * DML
+      * INSERT
+      * SELECT
+      * UPDATE
+      * DELETE
+    * JOIN
+      * LEFT JOIN
+      * RIGHT JOIN
+      * INNER JOIN
+      * FULL JOIN
+      * CROSS JOIN
 
-### Servlet
+### ФРЕЙМВОРКИ
+ * Spring Ioc и Spring MVC
+   * Low coupling
+   * High cohesion
+   * Dependency Injection
+     * Constructor Injection
+     * Setter Injection
+   * Inversion of Control
+   * Bean
+     * Что такое bean?
+     * Scope бина
+   * Как конфигурировать Spring
+   * Что такое Controller?
+   * RequestMapping
+   * RequestParam
+   * RequestBody, ResponseBody
+ * JPA и Hibernate
+   * Что такое ORM?
+   * В чем преимущества и недостатки ORM(Hibernate) перед JDBC
+   * Что такое Entity
+   * Конфигурация с помощью аннотаций
+   * OneToMany
+   * ManyToMany
 
-### OOD
+
+### Дополнительно
+  * Сервлеты
+    * Расскажите про сервлеты.
+    * Для чего нужен web.xml?
+    * Что такое Tomcat? Зачем он нужен?
+  * OOD
+    * Паттерны
+      * Что такое паттерн проектирования?
+      * Зачем нужно знать паттерны?
+      * Singleton
+      * Abstract factory
+      * Adapter
+      * Iterator
+  * Юнит тестирование
+    * Что такое юнит тестирование?
+    * Как правильно писать тесты?
+    * Что такое мок?
+  * Сборка проекта
+    * Maven
+      * Что такое билд?
+      * Что такое артефакт?
+      * Расскажите про pom.xml

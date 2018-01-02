@@ -5,6 +5,7 @@ package com.courses.spalah;
  *
  * @author Ievgen Tararaka
  */
+
 public class HomeWorkStrings {
     /**
      * Метод должен вернуть количество четных чисел в строке.
@@ -14,8 +15,20 @@ public class HomeWorkStrings {
      * @param s строка типа число1_число2_число3_число4
      * @return количество четных числе в строке
      */
-    public static int countEvenInString(String s) {
-        return 1;
+    static int countEvenInString(String s) {
+        int[] arrayOfChar = new int[s.length()];
+        int iterator = 0;
+        int counterOfNumber = 0;
+
+        for (String tmp : s.split("_")) {
+            arrayOfChar[iterator] = Integer.parseInt(tmp);
+            if (arrayOfChar[iterator] % 2 == 0)
+                counterOfNumber++;
+            iterator++;
+        }
+        System.out.println(counterOfNumber);
+
+        return counterOfNumber;
     }
 
     /**
@@ -28,7 +41,19 @@ public class HomeWorkStrings {
      * @param s      исходная строка
      * @return результирующая строка
      */
-    public static String removeSymbolFromString(String symbol, String s) {
-        return "";
+
+    static String removeSymbolFromString(String symbol, String s) {
+        String clearString = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == symbol.charAt(0)) {
+                if ((i == 0) || (i == s.length() / 2) || (i == s.length() - 1)) {
+                    clearString += s.charAt(i);
+                }
+            } else {
+                clearString += s.charAt(i);
+            }
+        }
+        return clearString;
     }
 }

@@ -1,11 +1,9 @@
 package com.courses.spalah;
 
-/**
- * Модифицируйте этот класс(файл)
- *
- * @author Ievgen Tararaka
- */
-public class HomeWorkLoops {
+import java.util.Arrays;
+
+class HomeWorkLoops {
+
     /**
      * Метод должен вернуть минимальное число
      * из заданного массива.
@@ -15,8 +13,26 @@ public class HomeWorkLoops {
      * @param integers заданный массив типа int[]
      * @return минимальное число из массива
      */
-    public static int min(int[] integers) {
-        return 1;
+
+    static int min(int[] integers) {
+        int[] array = new int[integers.length];
+        int tmp = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = integers[i];
+            System.out.println("element[" + i + "] = " + array[i]);
+
+            if (i == 0) {
+                tmp = array[i];
+            }
+            if (array[i] < tmp) {
+                tmp = array[i];
+            }
+        }
+
+        System.out.println("Min number = " + tmp);
+
+        return tmp;
     }
 
     /**
@@ -28,8 +44,26 @@ public class HomeWorkLoops {
      * @param doubles заданный массив типа double[]
      * @return максимальное число из массива
      */
-    public static double max(double[] doubles) {
-        return 1;
+
+    static double max(double[] doubles) {
+        double[] array = new double[doubles.length];
+        double tmp = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = doubles[i];
+            System.out.println("element[" + i + "] = " + array[i]);
+
+            if (i == 0) {
+                tmp = array[i];
+            }
+            if (array[i] > tmp) {
+                tmp = array[i];
+            }
+        }
+
+        System.out.println("Max number = " + tmp);
+
+        return tmp;
     }
 
     /**
@@ -41,8 +75,25 @@ public class HomeWorkLoops {
      * @param shorts заданный массив типа short[]
      * @return среднее арифмитическое число из массива
      */
-    public static float average(short[] shorts) {
-        return 1;
+
+    static float average(short[] shorts) {
+        short[] array = new short[shorts.length];
+        float tmp = 0;
+        float average = 0;
+        int i = 0;
+
+        while (i != array.length) {
+            array[i] = shorts[i];
+            System.out.println("element[" + i + "] = " + array[i]);
+            tmp += array[i];
+            i++;
+        }
+
+        average = tmp / array.length;
+
+        System.out.println("Average number = " + average);
+
+        return average;
     }
 
     /**
@@ -53,7 +104,30 @@ public class HomeWorkLoops {
      * @param chars заданный массив типа char[]
      * @return перевернутый массив
      */
-    public static char[] reverse(char[] chars) {
-        return new char[1];
+
+    static char[] reverse(char[] chars) {
+        char[] array = new char[chars.length];
+        char tmp = 0;
+        int iterator = 0;
+        int halfOfLenghtArray = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = chars[i];
+            halfOfLenghtArray = array.length / 2;
+        }
+
+        System.out.println(Arrays.toString(array));
+
+        do {
+            tmp = array[iterator];
+
+            array[iterator] = array[array.length - 1 - iterator];
+            array[array.length - 1 - iterator] = tmp;
+            iterator++;
+        } while (iterator < halfOfLenghtArray);
+
+        System.out.println(Arrays.toString(array));
+
+        return array;
     }
 }

@@ -1,5 +1,7 @@
 package com.courses.spalah;
 
+import java.util.Scanner;
+
 /**
  * @author Ievgen Tararaka
  */
@@ -20,5 +22,32 @@ public class ConsecutiveNumbers {
      * @param args - аргументы коммандной строки
      */
     public static void main(String[] args) {
+        System.out.print("Введите строку из любых чисел, разделяя их запятой: ");
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+
+        check(string);
+    }
+
+    private static void check(String string) {
+        int[] arrayOfChar = new int[string.length()];
+        int iterator = 0;
+        int error = 0;
+
+        for (String tmp : string.split(",")) {
+            arrayOfChar[iterator] = Integer.parseInt(tmp);
+            if (arrayOfChar[iterator] != iterator + 1) {
+                error++;
+            }
+            iterator++;
+        }
+
+        switch (error) {
+            case 0:
+                System.out.println("Последовательность чисел правильная!");
+                break;
+            default:
+                System.out.println("Последовательность чисел не правильная!");
+        }
     }
 }
